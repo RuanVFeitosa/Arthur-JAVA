@@ -63,6 +63,18 @@ public class HandleMenu {
 		gs.listarUsuarios();
 	}
 	
+	public void trocarSenhaUsuario() {
+		System.out.println("Digite o ID do usuário: ");
+		int id = sc.nextInt();
+		System.out.println("Digite a senha antiga: ");
+		String senhaAntiga = sc.next();
+		System.out.println("Digite a nova senha: ");
+		String novaSenha = sc.next();
+ 
+		// Chama o método trocarSenha do GerenciadorDeUsuarios
+		gs.trocarSenha(id, senhaAntiga, novaSenha);
+	}
+	
 	public void login() {
 		Scanner input1 = new Scanner(System.in);
 		
@@ -98,5 +110,4 @@ public class HandleMenu {
 		}
 		return maxId + 1;
 	}
-
 }

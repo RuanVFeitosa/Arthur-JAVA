@@ -10,7 +10,10 @@ public class Produto {
 	
 
 	public Produto(long id2, String nome2, double preco2, int qtd2) {
-		// TODO Auto-generated constructor stub
+		this.id = id2;
+		this.nome = nome2;
+		this.preco = preco2;
+		this.qtd = qtd2;
 	}
 	
 	public long getId() {

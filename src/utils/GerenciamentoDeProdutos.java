@@ -139,21 +139,23 @@ public class GerenciamentoDeProdutos {
 				}
 			}
 		}
-
-		public void login(String usuario, String senha) {
-			List<Produto> produtos = lerProdutos();
-			
-			if (usuario.equals(usuario)) {
-			if(senha.equals(senha)) {
-			    System.out.println("Login efetuado com sucesso");		
-			    	} 
-			    } else {
-		    		System.out.println("Login ou senha não encontrados");
-
-			    }
-		}
-
 		
-		
+		public void somarPrecos() {
+	        List<Produto> produtos = lerProdutos();
+	        double total = 0;
+	        for (Produto produto : produtos) {
+	            total += produto.getPreco() * produto.getQtd();
+	        }
+	        System.out.printf("O valor total dos produtos em estoque é: R$ %.2f\n", total);
+	    }
+
+	    public void contarQuantidadeProdutos() {
+	        List<Produto> produtos = lerProdutos();
+	        int totalQuantidade = 0;
+	        for (Produto produto : produtos) {
+	            totalQuantidade += produto.getQtd();
+	        }
+	        System.out.println("A quantidade total de produtos em estoque é: " + totalQuantidade);
+	    }
 	}
 

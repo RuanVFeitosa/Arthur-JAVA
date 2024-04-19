@@ -15,7 +15,7 @@ public class Sistema {
 		int opcao = 0;
 		do {
 			// \n
-			System.out.println("1 - Criar \n2 - Editar \n3 - Deletar \n4 - Listar \n5 - Listar ID \n6 - Login \n9 - Sair \n");
+			System.out.println("1 - Criar \n2 - Editar \n3 - Deletar \n4 - Listar \n5 - Listar ID \n6 - Login \n7 - Trocar Senha \n9 - Sair \n");
 			opcao = sc.nextInt();
 			
 			switch (opcao) {
@@ -46,6 +46,11 @@ public class Sistema {
 			
 			case 6: {
 				hm.login();
+				break;
+			}
+			
+			case 7: {
+				hm.trocarSenhaUsuario();
 				break;
 			}
 			

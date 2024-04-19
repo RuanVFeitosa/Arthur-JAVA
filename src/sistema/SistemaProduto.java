@@ -15,7 +15,7 @@ public class SistemaProduto {
 		int opcao = 0;
 		do {
 			// \n
-			System.out.println("1 - Criar \n2 - Editar \n3 - Deletar \n4 - Listar \n5 - Listar ID \n6 - Login \n9 - Sair \n");
+			System.out.println("Bem-vindo ao Cadatro de Produtos \n |1 - Criar \n |2 - Editar \n |3 - Deletar \n |4 - Listar \n |5 - Listar ID \n |6 - Somar Preços \n |7 - Contar Quantidade de Produtos \n |9  - Sair \n ---------------------------------------");
 			opcao = sc.nextInt();
 			
 			switch (opcao) {
@@ -45,7 +45,18 @@ public class SistemaProduto {
 			}
 			
 			case 6: {
-				hm.login();
+				hm.somarPreços();
+				break;
+			}
+			
+			case 7: {
+				hm.contarQuantidadeProdutos();
+				break;
+			}
+			
+			case 9: {
+				System.out.println("Finalizando o Sistema...");
+				System.out.println("Tchau...");
 				break;
 			}
 			

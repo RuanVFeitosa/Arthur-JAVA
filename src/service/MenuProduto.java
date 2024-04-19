@@ -16,7 +16,7 @@ public class MenuProduto {
 	// Construtor vazio
 	public MenuProduto() {
 		// Toda vez que a classe menu, for instanciada, o nosso arquivo sera verificado
-		gs.verificarECriar("usuarios.txt");
+		gs.verificarECriar("produtos.txt");
 	}
 	
 	public void criar() {
@@ -30,6 +30,8 @@ public class MenuProduto {
 		int qtd = sc.nextInt();
 		
 		long id = getNextId();
+		
+		System.out.println("Produto cdastrado com sucesso");
 		
 		Produto p = new Produto(id, nome, preco, qtd);
 		gs.adicionarProdutos(p);
@@ -70,19 +72,15 @@ public class MenuProduto {
 		gs.listarProdutos();
 	}
 	
-	public void login() {
-		Scanner input1 = new Scanner(System.in);
-		
-	    System.out.print("Insira o seu Nome: ");
-	    String usuario = input1.next();
-
-
-	    System.out.print("Insira a senha: ");
-	    String senha = input1.next();
-
-	      gs.login(usuario, senha); 
-
+	public void somarPreços() {
+		gs.somarPrecos();
 	}
+	
+
+    public void contarQuantidadeProdutos() {
+    	gs.contarQuantidadeProdutos();
+    }
+
 	
 	
 	private long getNextId() {
